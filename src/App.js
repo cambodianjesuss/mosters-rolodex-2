@@ -7,7 +7,9 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      name: "Boi",
+    };
   }
 
   render() {
@@ -15,7 +17,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hi Boi</p>
+          <p>Hi {this.state.name}</p>
           <button>Change Name</button>
         </header>
       </div>
