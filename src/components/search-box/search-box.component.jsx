@@ -2,12 +2,12 @@ import { Component } from "react";
 
 class SearchBox extends Component {
   render(){
-    const {onSearchChange} = this.props
+    const {onChangeHandler, placeholder, className} = this.props
     return <input
-          className="search-box"
+          className={className}
           type="search"
-          placeholder="search monsters"
-          onChange={onSearchChange}
+          placeholder={placeholder}
+          onChange={onChangeHandler}
         />
   }
 }
