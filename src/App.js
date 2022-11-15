@@ -22,7 +22,7 @@ class App extends Component {
           () => {
             return { monsters: users };
           },
-          () => console.log(this.state),
+          // () => console.log(this.state),
         ),
       );
   }
@@ -50,11 +50,7 @@ class App extends Component {
           placeholder="search monsters"
           onChange={onSearchChange}
         />
-        {filteredMonsters.map((monster) => {
-          return <h1 key={monster.id}>{monster.name}</h1>;
-        })}
-
-        <CardList />
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
