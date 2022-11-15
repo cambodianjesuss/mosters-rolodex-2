@@ -9,17 +9,35 @@ class App extends Component {
     super();
 
     this.state = {
-      monsters: [
-        { name: "Linda", id: 1 },
-        { name: "Frank", id: 2 },
-        { name: "Jacky", id: 3 },
-      ],
+      monsters: [],
     };
+
+    console.log("constructor");
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((users) =>
+        this.setState(
+          () => {
+            return { monsters: users };
+          },
+          () => console.log(this.state),
+        ),
+      );
+    console.log("componentDidMount");
   }
 
   render() {
+    console.log("render");
     return (
       <div className="App">
+        <input
+          className="search-box"
+          type="search"
+          placeholder="search monsters"
+        />
         {this.state.monsters.map((monster) => {
           return <h1 key={monster.id}>{monster.name}</h1>;
         })}
