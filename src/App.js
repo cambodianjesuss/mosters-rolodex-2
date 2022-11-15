@@ -1,6 +1,5 @@
 import { Component } from "react";
 
-import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
@@ -8,18 +7,20 @@ class App extends Component {
     super();
 
     this.state = {
-      monster1: { name: "Linda" },
-      monster2: { name: "Frank" },
-      monster3: { name: "Jacky" },
+      monsters: [
+        { name: "Linda", key: 1 },
+        { name: "Frank", key: 2 },
+        { name: "Jacky", key: 3 },
+      ],
     };
   }
 
   render() {
     return (
       <div className="App">
-        <h1>{this.state.monster1.name}</h1>
-        <h1>{this.state.monster2.name}</h1>
-        <h1>{this.state.monster3.name}</h1>
+        {this.state.monsters.map((monster) => {
+          return <h1 key={monster.key}>{monster.name}</h1>;
+        })}
       </div>
     );
   }
