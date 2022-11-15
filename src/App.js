@@ -1,5 +1,6 @@
 import { Component } from "react";
 
+import CardList from "./components/card-list/card-list.component";
 import "./App.css";
 
 // quick update for TEST branch
@@ -52,6 +53,8 @@ class App extends Component {
         {filteredMonsters.map((monster) => {
           return <h1 key={monster.id}>{monster.name}</h1>;
         })}
+
+        <CardList />
       </div>
     );
   }
