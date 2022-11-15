@@ -9,6 +9,7 @@ class App extends Component {
 
     this.state = {
       name: "Boi",
+      company: "Robata",
     };
   }
 
@@ -17,10 +18,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hi {this.state.name}</p>
+          <p>
+            Hi {this.state.name}, I work at {this.state.company}
+          </p>
           <button
             onClick={() => {
               this.setState({ name: "Jake" });
+              console.log(this.state);
             }}
           >
             Change Name
