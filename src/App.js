@@ -6,10 +6,10 @@ import CardList from "./components/card-list/card-list.component";
 import "./App.css";
 
 const App = () => {
-  const [searchField, setSearchField] = useState(""); // [value, setValue]
+  const [searchField, setSearchField] = useState("a"); // [value, setValue]
   console.log({ searchField });
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Joban");
   console.log({ name });
 
   const onSearchChange = (event) => {
@@ -20,6 +20,8 @@ const App = () => {
   const onButtonChange = () => {
     setName("Joban");
   };
+
+  console.log("Render");
 
   return (
     <div className="App">
