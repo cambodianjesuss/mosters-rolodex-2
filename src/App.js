@@ -11,6 +11,8 @@ const App = () => {
   const [monsters, setMonsters] = useState([]);
   const [filteredMonsters, setFilteredMonsters] = useState(monsters);
 
+  console.log("Render");
+
   // First argument is a callback function we want to use an effect on our functional component
   // Second argument is and array of our dependencies in state values*/prop values in context of application
   // Only make this call when we make this call once, so we don't add any depencies.
