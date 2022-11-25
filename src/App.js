@@ -9,16 +9,9 @@ const App = () => {
   const [searchField, setSearchField] = useState(""); // [value, setValue]
   console.log({ searchField });
 
-  const [name, setName] = useState("");
-  console.log({ name });
-
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldString);
-  };
-
-  const onButtonChange = () => {
-    setName("Joban");
   };
 
   return (
@@ -29,7 +22,6 @@ const App = () => {
         onChangeHandler={onSearchChange}
         placeholder="search monsters"
       />
-      <button onClick={onButtonChange}>SET NAME</button>
     </div>
   );
 };
