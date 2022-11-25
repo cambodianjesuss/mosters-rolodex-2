@@ -6,22 +6,13 @@ import CardList from "./components/card-list/card-list.component";
 import "./App.css";
 
 const App = () => {
-  const [searchField, setSearchField] = useState("a"); // [value, setValue]
+  const [searchField, setSearchField] = useState(""); // [value, setValue]
   console.log({ searchField });
-
-  const [name, setName] = useState("Joban");
-  console.log({ name });
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldString);
   };
-
-  const onButtonChange = () => {
-    setName("Joban");
-  };
-
-  console.log("Render");
 
   return (
     <div className="App">
@@ -31,7 +22,6 @@ const App = () => {
         onChangeHandler={onSearchChange}
         placeholder="search monsters"
       />
-      <button onClick={onButtonChange}>SET NAME</button>
     </div>
   );
 };
