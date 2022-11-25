@@ -4,7 +4,6 @@ import SearchBox from "./components/search-box/search-box.component";
 import CardList from "./components/card-list/card-list.component";
 
 import "./App.css";
-import userEvent from "@testing-library/user-event";
 
 const App = () => {
   const [searchField, setSearchField] = useState(""); // [value, setValue]
